@@ -1,6 +1,0 @@
-{
-  "name": "Ning Zhou - Academic Website",
-  "description": "Personal academic website of Ning Zhou, Lecturer in the Department of Computer Science at Purdue University.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
