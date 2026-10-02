@@ -71,7 +71,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = ({ profile, onOpe
             <div className="bg-white rounded-xl border border-stone-200 shadow-xs overflow-hidden">
               <div className="bg-stone-900 text-stone-100 p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                  <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-900/40 text-amber-200 border border-amber-800 text-xs font-mono font-medium mb-2">
+                  <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-900/40 text-amber-200 border border-amber-800 text-xs font-medium mb-2">
                     <Terminal className="w-3.5 h-3.5" />
                     Purdue University CS Department
                   </div>
@@ -138,7 +138,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = ({ profile, onOpe
                           <Calendar className="w-3.5 h-3.5 text-stone-400" />
                           <span>Academic Term</span>
                         </div>
-                        <div className="font-mono text-stone-800">
+                        <div className="text-stone-800 font-medium">
                           {teaching.semesterPlaceholder}
                         </div>
                       </div>
@@ -150,7 +150,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = ({ profile, onOpe
                           <Clock className="w-3.5 h-3.5 text-stone-400" />
                           <span>Office Hours</span>
                         </div>
-                        <div className="font-mono text-stone-800 font-medium">
+                        <div className="text-stone-800 font-medium">
                           {profile.contact.hours || teaching.officeHoursPlaceholder}
                         </div>
                       </div>
@@ -186,7 +186,7 @@ export const TeachingSection: React.FC<TeachingSectionProps> = ({ profile, onOpe
                           <MapPin className="w-3.5 h-3.5 text-stone-400" />
                           <span>Lecture & Labs</span>
                         </div>
-                        <div className="font-mono text-stone-800">
+                        <div className="text-stone-800 font-medium">
                           {teaching.courseLocationPlaceholder}
                         </div>
                       </div>

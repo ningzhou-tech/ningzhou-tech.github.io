@@ -64,7 +64,7 @@ export const InterestsSection: React.FC<InterestsSectionProps> = ({ profile }) =
                 {interest.tags.map((tag, tIdx) => (
                   <span
                     key={tIdx}
-                    className="px-2.5 py-1 rounded bg-stone-100 text-stone-700 text-xs font-mono font-medium border border-stone-200/60"
+                    className="px-2.5 py-1 rounded bg-stone-100 text-stone-700 text-xs font-medium border border-stone-200/60"
                   >
                     #{tag}
                   </span>

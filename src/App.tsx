@@ -104,7 +104,7 @@ export default function App() {
         >
           <div className="max-w-6xl mx-auto w-full flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <span className="px-1.5 py-0.5 rounded bg-amber-800/80 text-amber-200 font-mono text-[10px] font-semibold tracking-wide uppercase">
+              <span className="px-1.5 py-0.5 rounded bg-amber-800/80 text-amber-200 text-[10px] font-semibold tracking-wide uppercase">
                 Studio Edit Mode
               </span>
               <span className="text-stone-300">

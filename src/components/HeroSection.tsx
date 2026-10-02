@@ -133,7 +133,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ profile, onOpenEditMod
                     <Clock className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
                     <div>
                       <span className="font-medium text-stone-900 block">Office Hours:</span>
-                      <span className="font-mono text-stone-800 text-[11px] font-medium">{profile.contact.hours}</span>
+                      <span className="text-stone-800 text-xs font-medium">{profile.contact.hours}</span>
                     </div>
                   </div>
                 )}

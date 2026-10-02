@@ -73,7 +73,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile, onOpenE
                       {copiedKey === 'email' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                     </button>
                   </div>
-                  <div className="p-2.5 bg-stone-50 rounded border border-stone-200/80 font-mono text-xs text-stone-800 break-all">
+                  <div className="p-2.5 bg-stone-50 rounded border border-stone-200/80 text-xs text-stone-800 break-all">
                     {contact.email}
                   </div>
                 </div>
@@ -88,7 +88,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile, onOpenE
                       Office Location
                     </span>
                   </div>
-                  <div className="p-2.5 bg-stone-50 rounded border border-stone-200/80 font-mono text-xs text-stone-800">
+                  <div className="p-2.5 bg-stone-50 rounded border border-stone-200/80 text-xs text-stone-800">
                     {contact.office}
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ profile, onOpenE
                       Student Office Hours
                     </span>
                   </div>
-                  <div className="p-2.5 bg-stone-50 rounded border border-stone-200/80 font-mono text-xs text-stone-800 font-medium">
+                  <div className="p-2.5 bg-stone-50 rounded border border-stone-200/80 text-xs text-stone-800 font-medium">
                     {contact.hours}
                   </div>
                 </div>

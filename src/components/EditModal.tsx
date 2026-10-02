@@ -153,7 +153,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                       contact: { ...formData.contact, email: e.target.value },
                     })
                   }
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
                   placeholder="e.g. zhou1489@purdue.edu"
                 />
               </div>
@@ -171,7 +171,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                       contact: { ...formData.contact, office: e.target.value },
                     })
                   }
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
                   placeholder="e.g. LWSN B116A"
                 />
               </div>
@@ -191,7 +191,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                       teaching: { ...formData.teaching, officeHoursPlaceholder: val },
                     });
                   }}
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
                   placeholder="e.g. Monday noon–2:00 PM and Thursday noon–1:00 PM"
                 />
               </div>
@@ -210,7 +210,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                     })
                   }
                   placeholder="https://www.cs.purdue.edu/people/faculty/zhou1489.html"
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
                 />
               </div>
 
@@ -228,7 +228,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                         contact: { ...formData.contact, githubLink: e.target.value },
                       })
                     }
-                    className="w-full p-2 rounded border border-stone-300 font-mono text-xs"
+                    className="w-full p-2 rounded border border-stone-300 text-xs"
                   />
                 </div>
                 <div>
@@ -244,7 +244,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                         contact: { ...formData.contact, linkedinLink: e.target.value },
                       })
                     }
-                    className="w-full p-2 rounded border border-stone-300 font-mono text-xs"
+                    className="w-full p-2 rounded border border-stone-300 text-xs"
                   />
                 </div>
               </div>
@@ -267,7 +267,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                       teaching: { ...formData.teaching, semesterPlaceholder: e.target.value },
                     })
                   }
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs"
                   placeholder="e.g. Fall 2026"
                 />
               </div>
@@ -287,7 +287,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                       teaching: { ...formData.teaching, officeHoursPlaceholder: val },
                     });
                   }}
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
                   placeholder="e.g. Monday noon–2:00 PM and Thursday noon–1:00 PM"
                 />
               </div>
@@ -305,7 +305,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                       teaching: { ...formData.teaching, syllabusPlaceholder: e.target.value },
                     })
                   }
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs"
                   placeholder="e.g. https://purdue.simplesyllabus.com/..."
                 />
               </div>
@@ -323,7 +323,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                       teaching: { ...formData.teaching, courseLocationPlaceholder: e.target.value },
                     })
                   }
-                  className="w-full p-2.5 rounded border border-stone-300 font-mono text-xs"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs"
                   placeholder="e.g. Elliott Hall of Music / Lawson CS Labs"
                 />
               </div>
@@ -341,7 +341,7 @@ export const EditModal: React.FC<EditModalProps> = ({
                 <div key={pIdx} className="p-3.5 bg-stone-50/80 rounded-lg border border-stone-200 space-y-3">
                   <div className="font-semibold text-stone-900 text-xs flex items-center justify-between">
                     <span>{pillar.category}</span>
-                    <span className="text-[10px] text-stone-500 uppercase tracking-wider font-mono">Pillar #{pIdx + 1}</span>
+                    <span className="text-[10px] text-stone-500 uppercase tracking-wider font-semibold">Pillar #{pIdx + 1}</span>
                   </div>
 
                   <div>

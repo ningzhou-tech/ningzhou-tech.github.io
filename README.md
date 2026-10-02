@@ -1,20 +1,20 @@
-# Ning Zhou Academic Portfolio
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-This repository contains the source code for Ning Zhou's academic portfolio website.
+# Run and deploy your AI Studio app
 
-## GitHub Pages
+This contains everything you need to run your app locally.
 
-The site is configured to deploy automatically with GitHub Actions.
+View your app in AI Studio: https://ai.studio/apps/9e8a8837-8c13-4537-a1f2-d09b106942dc
 
-After the files are committed to the `main` branch:
+## Run Locally
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** if it is not already selected.
-3. Open the **Actions** tab and wait for the deployment workflow to finish.
-4. The site should then be available at:
+**Prerequisites:**  Node.js
 
-   https://ningzhou-tech.github.io/
 
-## Security
-
-Do not add Gemini API keys, `.env` files, passwords, or other secrets to this repository.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
