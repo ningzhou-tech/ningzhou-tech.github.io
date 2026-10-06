@@ -33,7 +33,7 @@ export const initialProfileData: AcademicProfile = {
       "Building Strong Programming Foundations"
     ],
     semesterPlaceholder: "Fall 2026",
-    officeHoursPlaceholder: "Monday noon–2:00 PM and Thursday noon–1:00 PM",
+    officeHoursPlaceholder: "Monday noon–2:00 PM and Friday 9:00 –10:00 AM",
     syllabusPlaceholder: "https://purdue.simplesyllabus.com/en-US/doc/bgo06lbu7/WL-Fall-2026-CS-%28WL%29-15900-LE1-C-Programming?mode=view",
     courseLocationPlaceholder: "Lawson Computer Science & Engineering Lecture Halls"
   },
