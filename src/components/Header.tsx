@@ -4,11 +4,12 @@ import { Menu, X, Edit3, Printer, ExternalLink, GraduationCap } from 'lucide-rea
 interface HeaderProps {
   name: string;
   title: string;
+  avatarUrl?: string;
   onOpenEditModal: () => void;
   isEditor?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ name, title, onOpenEditModal, isEditor = false }) => {
+export const Header: React.FC<HeaderProps> = ({ name, title, avatarUrl, onOpenEditModal, isEditor = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -65,8 +66,17 @@ export const Header: React.FC<HeaderProps> = ({ name, title, onOpenEditModal, is
             id="nav-brand-link"
             className="group flex items-center gap-3 text-left focus:outline-hidden focus:ring-2 focus:ring-amber-800/40 rounded-sm"
           >
-            <div className="w-10 h-10 rounded-md bg-stone-900 text-stone-100 flex items-center justify-center font-serif text-lg font-semibold tracking-wider group-hover:bg-amber-900 transition-colors">
-              NZ
+            <div className="w-10 h-10 rounded-md bg-stone-900 text-stone-100 flex items-center justify-center font-serif text-lg font-semibold tracking-wider group-hover:bg-amber-900 transition-colors overflow-hidden border border-stone-300/80 shadow-2xs">
+              <img
+                src={avatarUrl || "/NingZhou.png"}
+                alt={name}
+                className="w-full h-full object-cover object-top"
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.currentTarget as HTMLElement).style.display = 'none';
+                }}
+              />
+              <span className="hidden">NZ</span>
             </div>
             <div>
               <div className="font-serif text-lg font-bold text-stone-900 tracking-tight leading-tight group-hover:text-amber-900 transition-colors">

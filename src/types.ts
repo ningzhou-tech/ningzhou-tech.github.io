@@ -4,6 +4,7 @@ export interface AcademicProfile {
   department: string;
   institution: string;
   degree: string;
+  avatarUrl?: string;
   welcomeIntro: string;
   aboutParagraphs: string[];
   teaching: {

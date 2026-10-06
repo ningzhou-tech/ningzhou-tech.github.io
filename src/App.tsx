@@ -18,7 +18,7 @@ import { EditModal } from './components/EditModal';
 import { Edit3, Eye, Sparkles, X, Info } from 'lucide-react';
 import { isEditModeAvailable } from './utils/environment';
 
-const STORAGE_KEY = 'ning_zhou_academic_profile_v6';
+const STORAGE_KEY = 'ning_zhou_academic_profile_v7';
 
 export default function App() {
   const isDevEnv = isEditModeAvailable();
@@ -38,19 +38,22 @@ export default function App() {
 
   const [profile, setProfile] = useState<AcademicProfile>(() => {
     try {
-      const saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('ning_zhou_academic_profile_v5');
+      const saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('ning_zhou_academic_profile_v6');
       if (saved) {
         const parsed = JSON.parse(saved);
+        if (!parsed.avatarUrl) {
+          parsed.avatarUrl = initialProfileData.avatarUrl;
+        }
         if (parsed.contact?.directoryLink === 'https://www.cs.purdue.edu' || !parsed.contact?.directoryLink) {
           parsed.contact = {
             ...parsed.contact,
             directoryLink: initialProfileData.contact.directoryLink,
           };
-          try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
-          } catch {
-            // ignore
-          }
+        }
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
+        } catch {
+          // ignore
         }
         return parsed;
       }
@@ -147,6 +150,7 @@ export default function App() {
       <Header
         name={profile.name}
         title={profile.title}
+        avatarUrl={profile.avatarUrl}
         onOpenEditModal={() => setIsEditModalOpen(true)}
         isEditor={isEditorMode}
       />

@@ -421,6 +421,24 @@ export const EditModal: React.FC<EditModalProps> = ({
 
               <div>
                 <label className="block font-semibold text-stone-800 mb-1">
+                  Profile Photo URL / Path
+                </label>
+                <input
+                  type="text"
+                  value={formData.avatarUrl || ''}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      avatarUrl: e.target.value,
+                    })
+                  }
+                  placeholder="/NingZhou.png"
+                  className="w-full p-2.5 rounded border border-stone-300 text-xs focus:ring-2 focus:ring-amber-700/20 focus:border-amber-700"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-stone-800 mb-1">
                   Degree Description
                 </label>
                 <input

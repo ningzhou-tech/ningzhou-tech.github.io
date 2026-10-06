@@ -22,16 +22,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ profile, onOpenEditMod
               Purdue University • Department of Computer Science
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-4">
               <h1 id="hero-heading-name" className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 tracking-tight">
                 {profile.name}
               </h1>
-              <p id="hero-heading-title" className="text-xl sm:text-2xl font-serif text-stone-700 font-medium">
-                {profile.title}, {profile.department}
-              </p>
-              <p className="text-base font-sans text-stone-600 font-medium">
-                {profile.institution}
-              </p>
+
+              {/* Picture to the left next to the lecturer and institution lines */}
+              <div className="flex items-center gap-4 sm:gap-5 pt-1">
+                <div className="relative group shrink-0">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden ring-3 ring-amber-700/20 shadow-md bg-stone-100 border border-stone-200">
+                    <img
+                      src={profile.avatarUrl || "/NingZhou.png"}
+                      alt={`Portrait of ${profile.name}`}
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <p id="hero-heading-title" className="text-xl sm:text-2xl font-serif text-stone-800 font-medium leading-tight">
+                    {profile.title}, {profile.department}
+                  </p>
+                  <p className="text-base font-sans text-stone-600 font-medium">
+                    {profile.institution}
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Welcoming introduction */}
@@ -89,8 +106,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ profile, onOpenEditMod
           <div className="lg:col-span-4">
             <div className="bg-white rounded-lg p-6 border border-stone-200 shadow-sm space-y-5">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-lg bg-stone-800 text-stone-100 flex items-center justify-center font-serif text-2xl font-bold shadow-xs">
-                  NZ
+                <div className="w-16 h-16 rounded-lg overflow-hidden bg-stone-800 text-stone-100 flex items-center justify-center font-serif text-2xl font-bold shadow-xs shrink-0 border border-stone-300">
+                  <img
+                    src={profile.avatarUrl || "/NingZhou.png"}
+                    alt={profile.name}
+                    className="w-full h-full object-cover object-top"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLElement).style.display = 'none';
+                    }}
+                  />
+                  <span className="hidden">NZ</span>
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-stone-900 text-lg leading-tight">

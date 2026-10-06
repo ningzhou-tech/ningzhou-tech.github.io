@@ -6,6 +6,7 @@ export const initialProfileData: AcademicProfile = {
   department: "Department of Computer Science",
   institution: "Purdue University",
   degree: "M.S. in Computer Science",
+  avatarUrl: "/NingZhou.png",
   welcomeIntro: "Welcome to my academic homepage. I am a Lecturer in the Department of Computer Science at Purdue University, dedicated to teaching fundamental programming, fostering computational problem-solving, and mentoring the next generation of engineers and computer scientists.",
   aboutParagraphs: [
     "I have a master's degree in Computer Science. My professional background includes software development, business analysis, and college-level computer science instruction.",
