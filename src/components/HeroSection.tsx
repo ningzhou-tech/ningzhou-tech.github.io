@@ -104,17 +104,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ profile, onOpenEditMod
 
           {/* Academic Card / Profile Snapshot Column */}
           <div className="lg:col-span-4">
-            <div className="bg-white rounded-lg p-6 border border-stone-200 shadow-sm space-y-4">
-              <div className="border-b border-stone-100 pb-3">
-                <h3 className="font-serif font-bold text-stone-900 text-lg leading-tight">
-                  Academic Snapshot
-                </h3>
-                <p className="text-xs text-stone-500 font-sans mt-0.5">
-                  Overview & Quick Details
-                </p>
+            <div className="bg-white rounded-lg p-6 border border-stone-200 shadow-sm space-y-5">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-lg overflow-hidden bg-stone-800 text-stone-100 flex items-center justify-center font-serif text-2xl font-bold shadow-xs shrink-0 border border-stone-300">
+                  <img
+                    src={profile.avatarUrl || "/NingZhou.png"}
+                    alt={profile.name}
+                    className="w-full h-full object-cover object-top"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLElement).style.display = 'none';
+                    }}
+                  />
+                  <span className="hidden">NZ</span>
+                </div>
+                <div>
+                  <h3 className="font-serif font-bold text-stone-900 text-lg leading-tight">
+                    {profile.name}
+                  </h3>
+                  <p className="text-xs font-semibold text-stone-700 font-sans mt-1">
+                    Lecturer, Department of Computer Science
+                  </p>
+                </div>
               </div>
 
-              <div className="space-y-3 text-xs text-stone-600 font-sans">
+              <div className="border-t border-stone-100 pt-4 space-y-3 text-xs text-stone-600 font-sans">
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-stone-400 shrink-0 mt-0.5" />
                   <div>
