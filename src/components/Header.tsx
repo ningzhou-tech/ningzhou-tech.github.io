@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Edit3, Printer, ExternalLink, GraduationCap } from 'lucide-react';
 
 interface HeaderProps {
-  name: string;
-  title: string;
+  name?: string;
+  title?: string;
   avatarUrl?: string;
   onOpenEditModal: () => void;
   isEditor?: boolean;
 }
 
-export const Header: React.FC<HeaderProps> = ({ name, title, avatarUrl, onOpenEditModal, isEditor = false }) => {
+export const Header: React.FC<HeaderProps> = ({ onOpenEditModal, isEditor = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -59,36 +59,8 @@ export const Header: React.FC<HeaderProps> = ({ name, title, avatarUrl, onOpenEd
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18">
-          {/* Brand / Name & Department */}
-          <a
-            href="#home"
-            id="nav-brand-link"
-            className="group flex items-center gap-3 text-left focus:outline-hidden focus:ring-2 focus:ring-amber-800/40 rounded-sm"
-          >
-            <div className="w-10 h-10 rounded-md bg-stone-900 text-stone-100 flex items-center justify-center font-serif text-lg font-semibold tracking-wider group-hover:bg-amber-900 transition-colors overflow-hidden border border-stone-300/80 shadow-2xs">
-              <img
-                src={avatarUrl || "/NingZhou.png"}
-                alt={name}
-                className="w-full h-full object-cover object-top"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  (e.currentTarget as HTMLElement).style.display = 'none';
-                }}
-              />
-              <span className="hidden">NZ</span>
-            </div>
-            <div>
-              <div className="font-serif text-lg font-bold text-stone-900 tracking-tight leading-tight group-hover:text-amber-900 transition-colors">
-                {name}
-              </div>
-              <div className="text-xs font-sans text-stone-500 font-medium">
-                Purdue CS Lecturer
-              </div>
-            </div>
-          </a>
-
-          {/* Desktop Nav Items */}
+        <div className="flex items-center justify-between h-16">
+          {/* Left-aligned Navigation starting with Home */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-2">
             {navLinks.map((link) => (
               <a
@@ -105,6 +77,16 @@ export const Header: React.FC<HeaderProps> = ({ name, title, avatarUrl, onOpenEd
               </a>
             ))}
           </nav>
+
+          {/* Mobile indicator when menu is closed */}
+          <div className="md:hidden flex items-center">
+            <a
+              href="#home"
+              className="text-sm font-serif font-bold text-stone-900 tracking-tight"
+            >
+              Home
+            </a>
+          </div>
 
           {/* Utility Buttons */}
           <div className="hidden lg:flex items-center gap-2">
